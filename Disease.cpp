@@ -1,0 +1,2 @@
+#include "Disease.h"
+

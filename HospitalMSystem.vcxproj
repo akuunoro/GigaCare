@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{A0EFD0F6-D68F-4D3E-AA0C-3FAE04E2534F}</ProjectGuid>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>HospitalMSystem</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalOptions>/ENTRY:"mainCRTStartup" %(AdditionalOptions)</AdditionalOptions>
+      <EntryPointSymbol>WinMain</EntryPointSymbol>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalOptions>/ENTRY:"mainCRTStartup" %(AdditionalOptions)</AdditionalOptions>
+      <EntryPointSymbol>main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 9.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Adddoctor.cpp" />
+    <ClCompile Include="AddNurse.cpp" />
+    <ClCompile Include="Appointment.cpp" />
+    <ClCompile Include="Appointment2.cpp" />
+    <ClCompile Include="Disease.cpp" />
+    <ClCompile Include="Emergency.cpp" />
+    <ClCompile Include="Emergency2.cpp" />
+    <ClCompile Include="Emergency3.cpp" />
+    <ClCompile Include="Home.cpp" />
+    <ClCompile Include="Injury.cpp" />
+    <ClCompile Include="menuview.cpp" />
+    <ClCompile Include="Operations.cpp" />
+    <ClCompile Include="Patient.cpp" />
+    <ClCompile Include="Patient2.cpp" />
+    <ClCompile Include="Patient3.cpp" />
+    <ClCompile Include="Patient4.cpp" />
+    <ClCompile Include="Vappointment.cpp" />
+    <ClCompile Include="Vdoctor.cpp" />
+    <ClCompile Include="Vemegency.cpp" />
+    <ClCompile Include="Vemergency2.cpp" />
+    <ClCompile Include="Visitin.cpp" />
+    <ClCompile Include="Visitout.cpp" />
+    <ClCompile Include="Vnurse.cpp" />
+    <ClCompile Include="VOperations.cpp" />
+    <ClCompile Include="Vpatient.cpp" />
+    <ClCompile Include="VPatient2.cpp" />
+    <ClCompile Include="Vvisitor.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Adddoctor.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AddNurse.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Appointment.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Appointment2.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Disease.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Emergency.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Emergency2.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Emergency3.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Home.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Injury.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="menuview.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Operations.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Patient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Patient2.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Patient3.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Patient4.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Vappointment.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Vdoctor.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Vemegency.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Vemergency2.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Visitin.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Visitout.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Vnurse.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="VOperations.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Vpatient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="VPatient2.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Vvisitor.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Adddoctor.resx">
+      <DependentUpon>Adddoctor.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNurse.resx">
+      <DependentUpon>AddNurse.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointment.resx">
+      <DependentUpon>Appointment.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointment2.resx">
+      <DependentUpon>Appointment2.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Disease.resx">
+      <DependentUpon>Disease.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emergency.resx">
+      <DependentUpon>Emergency.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emergency2.resx">
+      <DependentUpon>Emergency2.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emergency3.resx">
+      <DependentUpon>Emergency3.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Injury.resx">
+      <DependentUpon>Injury.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuview.resx">
+      <DependentUpon>menuview.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operations.resx">
+      <DependentUpon>Operations.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient.resx">
+      <DependentUpon>Patient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient2.resx">
+      <DependentUpon>Patient2.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient3.resx">
+      <DependentUpon>Patient3.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient4.resx">
+      <DependentUpon>Patient4.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vappointment.resx">
+      <DependentUpon>Vappointment.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vdoctor.resx">
+      <DependentUpon>Vdoctor.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vemegency.resx">
+      <DependentUpon>Vemegency.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vemergency2.resx">
+      <DependentUpon>Vemergency2.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visitin.resx">
+      <DependentUpon>Visitin.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visitout.resx">
+      <DependentUpon>Visitout.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vnurse.resx">
+      <DependentUpon>Vnurse.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOperations.resx">
+      <DependentUpon>VOperations.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vpatient.resx">
+      <DependentUpon>Vpatient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VPatient2.resx">
+      <DependentUpon>VPatient2.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vvisitor.resx">
+      <DependentUpon>Vvisitor.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
